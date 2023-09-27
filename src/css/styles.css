@@ -1,29 +1,94 @@
-/* Use import to split up your CSS into manageable chunks */
-@import url("./_reset.css");
-/* Files that are only needed to be imported are called partials */
-/* These are marked with an underscore: */
-@import url("./_variables.css");
-/* Feel free to add as many of these imports as you need */
 
-@font-face {
-  font-family: "Roboto Slab", "serif";
-  src: local("Roboto Slab"),
+@import url("./_reset.css");
+@import url("./_variables.css");
+
+/* @font-face {
+  font-family: "Roboto", "serif";
+  src: local("Roboto"),
     url("/fonts/RobotoSlab-VariableFont_wght.woff2") format("woff2"),
     url("/fonts/RobotoSlab-VariableFont_wght.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+} */
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+  min-width: 320px;
+  font-weight: 400;
 }
 
-.centered {
+/* global */
+
+.flex {
   display: flex;
-  justify-content: center;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+ /* header */
+
+ .header {
+  position: absolute;
+  width: 100%;
+ }
+
+ .header__container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+ }
+
+ .nav__list {
+  gap: 30px;
+ }
+
+ .nav__link {
+  font-weight: 700;
+ }
+
+ .icons {
+  gap: 10px;
+ }
+
+ /* hero */
+
+.hero > img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }

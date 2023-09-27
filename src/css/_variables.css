@@ -2,6 +2,10 @@
 /* This could be colors, fonts, or padding sizes! */
 
 :root {
-  --color-primary: #7be447;
-  --color-secondary: #1f1f1f;
+  --color-primary: #ebbda0;
+  --color-secondary: rgba(235, 189, 160, 0.3);
+  --text-prinary: #0a3641;
+  --text-secondary: #fff;
+  --button-text-color: #0a3641;
+  --button-color: #ebbda0;
 }
