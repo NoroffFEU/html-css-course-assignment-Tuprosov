@@ -5,6 +5,16 @@
 @import url("./_variables.css");
 /* Feel free to add as many of these imports as you need */
 
+@font-face {
+  font-family: "Roboto Slab", "serif";
+  src: local("Roboto Slab"),
+    url("/fonts/RobotoSlab-VariableFont_wght.woff2") format("woff2"),
+    url("/fonts/RobotoSlab-VariableFont_wght.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
