@@ -138,13 +138,38 @@
                     <span>$100.00</span>
                 </p>
                 <div class="item-3-info flex">
-                    <svg width="136" height="22" viewBox="0 0 136 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.3074 1L14.2328 7.58254L20.7746 8.64458L16.041 13.7655L17.1582 21L11.3074 17.5825L5.45669 21L6.57382 13.7655L1.84021 8.64458L8.38205 7.58254L11.3074 1Z" fill="#FBBC04" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M39.709 1L42.6344 7.58254L49.1762 8.64458L44.4426 13.7655L45.5598 21L39.709 17.5825L33.8583 21L34.9754 13.7655L30.2418 8.64458L36.7837 7.58254L39.709 1Z" fill="#FBBC04" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M68.1106 1L71.036 7.58254L77.5779 8.64458L72.8443 13.7655L73.9614 21L68.1106 17.5825L62.2599 21L63.377 13.7655L58.6434 8.64458L65.1853 7.58254L68.1106 1Z" fill="#FBBC04" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M96.5124 1L99.4377 7.58254L105.98 8.64458L101.246 13.7655L102.363 21L96.5124 17.5825L90.6616 21L91.7788 13.7655L87.0452 8.64458L93.587 7.58254L96.5124 1Z" fill="#FBBC04" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M124.914 1L127.839 7.58254L134.381 8.64458L129.648 13.7655L130.765 21L124.914 17.5825L119.063 21L120.18 13.7655L115.447 8.64458L121.989 7.58254L124.914 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <div class="stars-rating flex">
+                        <input type="radio" name="rate">
+                        <label for="rate-5">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                        <input type="radio" name="rate">
+                        <label for="rate-4">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                        <input type="radio" name="rate">
+                        <label for="rate-3">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                        <input type="radio" name="rate">
+                        <label for="rate-2">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                        <input type="radio" name="rate">
+                        <label for="rate-1">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </label>
+                    </div>
                     <div class="item-3-review flex">
                         <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_829_215)">
@@ -167,7 +192,7 @@
                             </clippath>
                             </defs>
                         </svg>
-                        <a href="writeReview">Write your review</a>                            
+                        <a href="#writeReview">Write your review</a>                            
                     </div>
                     <div class="size-selector">
                         <label for="size">Size: <span></span></label>
@@ -243,6 +268,60 @@
                 </div>
             </div>
         </div>
+        <div class="popup" style="display: none;">
+            <div class="popup-title">Write your review</div>
+            <button class="closePopup" onclick="closePopUp()"></button>
+            <div class="popup-content flex">
+                <div class="popup-top flex">
+                    <img src="assets/images/jacket-1.webp" alt="raindays jacket">
+                    <p class="popup-desc"><span>Rain jacket featured pro</span><br>
+                        Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!
+                    </p>
+                    <div class="quality flex">
+                        <span>Quality:</span>
+                        <div class="stars-rating flex">
+                            <input type="radio" name="rate" id="rate-5">
+                            <label for="rate-5">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                            <input type="radio" name="rate" id="rate-4">
+                            <label for="rate-4">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                            <input type="radio" name="rate" id="rate-3">
+                            <label for="rate-3">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                            <input type="radio" name="rate" id="rate-2">
+                            <label for="rate-2">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                            <input type="radio" name="rate" id="rate-1">
+                            <label for="rate-1">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L14.09 7.58254L21 8.64458L16 13.7655L17.18 21L11 17.5825L4.82 21L6 13.7655L1 8.64458L7.91 7.58254L11 1Z" stroke="#FBBC04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <form class="flex" action="#" method="post">
+                    <label for="name">Your name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="review">Review *</label>
+                    <textarea id="review" name="review" maxlength="100" required></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
         <div class="bott-jp grid">
             <div class="bott__item-1">
                 <div class="item__header">
@@ -272,7 +351,7 @@
             </div>
             <div class="bott__item-2 flex">
                 <div class="review">
-                    <button class="btn-reset writeReview">WRITE YOUR REVIEW</button>
+                    <button class="btn-reset writeReview" id="writeReview" onclick="openPopUp()">WRITE YOUR REVIEW</button>
                 </div>
                 <div class="comment-wrapper flex">
                     <div class="comments flex">
@@ -485,5 +564,20 @@
       searchEnabled: false,
       itemSelectText: '',
     });
-  </script>
+
+    function openPopUp() {
+        const popup = document.querySelector('.popup');
+        if (popup) {
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    function closePopUp() {
+        const popup = document.querySelector('.popup');
+        if (popup) {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+  }
+</script>
 </html>
