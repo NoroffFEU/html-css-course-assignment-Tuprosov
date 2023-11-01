@@ -1,120 +1,4 @@
 
-@import url("./_reset.css");
-@import url("./_variables.css");
-
-/* @font-face {
-  font-family: "Roboto", "serif";
-  src: local("Roboto"),
-    url("/fonts/RobotoSlab-VariableFont_wght.woff2") format("woff2"),
-    url("/fonts/RobotoSlab-VariableFont_wght.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-} */
-html {
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 20px;
-  background-color: #F9EBE3;
-  scroll-behavior: smooth;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h2, h3, p {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-body {
-  min-width: 320px;
-  font-weight: 400;
-}
-
-
-/* global */
-
-.flex {
-  display: flex;
-}
-
-.grid {
-  display: grid;
-}
-
-.list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.btn-reset {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.container {
-  max-width: 1600px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 4rem;
-}
-
-.icon svg:hover path:not(:first-child) {
-  stroke: #EBBDA0;
-}
-
-.icon svg:hover {
-  fill: #A73131;
-}
-
- /* header */
-
- .header {
-  position: absolute;
-  width: 100%;
- }
-
- .header__container {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  justify-content: space-between;
-  align-items: center;
- }
-
- .header__logo {
-  height: 120px;
- }
-
- .nav__list {
-  gap: 30px;
- }
-
- .nav__link {
-  font-weight: 700;
-  color: var(--nav-color);
- }
-
- .icons {
-  gap: 10px;
- }
-
  /* hero */
 
 .hero > img {
@@ -366,50 +250,6 @@ input[type="checkbox"] {
   text-decoration: underline;
 }
 
-/* footer*/ 
-
-.footer {
-  padding-bottom: 50px;
-  padding-top: 50px;
-  background-color: #EBBDA0;
-}
-
-.footer__content {
-  justify-content: space-between;
-}
-
-.left {
-  gap: 20px;
-}
-
-.service__title,.info__title,.company__title {
-  margin-bottom: 10px;
-}
-
-.service__list,
-.info__list,
-.company__list {
-  flex-direction: column;
-  gap: 10px;
-}
-
-.right {
-  gap: 90px;
-}
-
-.payments__methods {
-  max-width: 300px;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: 100px 100px;
-  grid-template-rows: 60px 60px;
-  justify-content: center;
-}
-
-.social__list {
-  flex-direction: column;
-  gap: 15px;
-}
 
 
 /* ----------------------- jacket html----------------*/
@@ -491,6 +331,7 @@ input[type="checkbox"] {
  }
 
 .product__desc {
+  text-align: center;
   color: var(--text-primary);
   font-size: 18px;
 }
@@ -736,7 +577,6 @@ input[type="checkbox"] {
 }
 
 .bott-jp {
-  margin-bottom: 50px;
   gap: 80px;
   grid-template-rows: 850px;
   grid-template-columns: 20% 75%;
