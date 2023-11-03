@@ -410,6 +410,7 @@ cartItems.forEach((item) => {
   const decrementButton = item.querySelector('.decrement');
   const incrementButton = item.querySelector('.increment');
   const quantityDisplay = item.querySelector('.quantity');
+  const quantitySpan = item.querySelector('.item__details span:last-child');
 
   // Add event listener for decrement button
   decrementButton.addEventListener('click', () => {
@@ -418,6 +419,7 @@ cartItems.forEach((item) => {
       quantity--;
       quantityDisplay.setAttribute('data-quantity', quantity);
       quantityDisplay.textContent = quantity;
+      quantitySpan.textContent = `Quantity: ${quantity}`
     }
   });
 
@@ -427,8 +429,8 @@ cartItems.forEach((item) => {
     quantity++;
     quantityDisplay.setAttribute('data-quantity', quantity);
     quantityDisplay.textContent = quantity;
+    quantitySpan.textContent = `Quantity: ${quantity}`
   });
 });
-
 </script>
 </html>

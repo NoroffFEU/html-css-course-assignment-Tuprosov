@@ -89,10 +89,20 @@
 
 .choices__inner {
     font-size: 16px;
+    border-radius: 10px;
+}
+
+.is-open .choices__inner {
+    border-radius: 10px 10px 0 0;
 }
 
 .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
     padding-right: 0;
+}
+
+.choices__list.choices__list--dropdown.is-active {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .product__list-lj {
