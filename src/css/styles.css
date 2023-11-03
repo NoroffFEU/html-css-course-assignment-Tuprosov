@@ -199,7 +199,6 @@
 .news__title {
   margin-bottom: 20px;
   text-align: center;
-  color: var(--text-primary);
 }
 
 .news__desc {
@@ -243,9 +242,6 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-.check > label {
-  color: var(--text-primary);
-}
 .check > label > a {
   text-decoration: underline;
 }
@@ -260,21 +256,21 @@ input[type="checkbox"] {
 
 .header-jp {
   background-color: var(--color-primary);
- }
+}
 
 
 .nav-panel {
   margin-bottom: 100px;
   min-height: 50px;
   background-color: rgba(235, 189, 160, 0.30);
- }
+}
 
 .top-jp {
   margin-bottom: 50px;
   gap: 50px;
   grid-template-rows: 850px;
   grid-template-columns: 20% 35% 35%;
- }
+}
 
 .top__item-1,
 .bott__item-1 {
@@ -289,13 +285,12 @@ input[type="checkbox"] {
   border-bottom: 1px solid rgba(10, 54, 65, 0.50);
   border-radius: 10px;
   background-color: #F9EBE3;
- }
+}
 
 .item__header h2 {
   text-align: center;
   font-size: 1.6rem;
-  color: var(--text-primary);
- }
+}
 
 .content-wrapper {
   display: flex;
@@ -308,7 +303,6 @@ input[type="checkbox"] {
 .new-products {
   align-self: flex-end;
   padding-right: 20px;
-  color: var(--text-primary);
   background-image: url("/assets/images/arrow.png");
   background-position: right center;
   background-repeat: no-repeat;
@@ -317,37 +311,36 @@ input[type="checkbox"] {
 .product__item {
   gap: 1rem;
   align-items: center;
- }
+}
 
 .product__item img {
   width: 150px;
   max-height: 150px;
   border: 1px solid rgba(10, 54, 65, 0.50);
   border-radius: 10px;
- }
+}
 
 .product__item:not(:last-child) {
   margin-bottom: 25px;
- }
+}
 
 .product__desc {
   text-align: center;
-  color: var(--text-primary);
   font-size: 18px;
 }
 
- .target-image {
+.target-image {
   margin-bottom: 30px;
   width: 100%;
   max-height: 500px;
- }
+}
 
 .target-image img {
   width: 100%;
   max-height: 500px;
   border: 1px solid rgba(10, 54, 65, 0.50);
   border-radius: 10px;
- }
+}
 
 .image-parts {
   justify-content: space-between;
@@ -358,13 +351,13 @@ input[type="checkbox"] {
   max-height: 140px;
   border: 1px solid rgba(10, 54, 65, 0.50);
   border-radius: 10px;
- }
+}
 
 .item-3-title {
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 400;
- }
+}
 
 .item-3-desc {
   margin-bottom: 20px;
@@ -392,7 +385,7 @@ input[type="checkbox"] {
 
 .size-selector {
   max-width: 100px;
- }
+}
 
 .size-selector label {
   display: block;
@@ -502,7 +495,6 @@ input[type="checkbox"] {
   padding: 10px 25px;
   border-radius: 10px;
   background-color: var(--color-primary);
-  color: var(--text-primary);
   font-size: 25px;
   font-weight: 500;
 }
@@ -714,7 +706,6 @@ input[type="checkbox"] {
 }
 
 .popup-desc span {
-  color: var(--text-primary);
   font-weight: 600;
 }
 
