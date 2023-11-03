@@ -54,6 +54,17 @@
     border-top: none;
 }
 
+.quantity-control {
+    position: absolute;
+    gap: 30px;
+    bottom: 40px;
+    right: 100px;
+    padding: 5px 30px;
+    border: 1px solid rgba(10, 54, 65, 0.50);
+    border-radius: 20px;
+    font-size: 30px;
+}
+
 .product-select,
 .main form {
     display: inline-block;
