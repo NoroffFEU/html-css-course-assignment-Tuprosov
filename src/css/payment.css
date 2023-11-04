@@ -1,0 +1,98 @@
+
+.payment {
+    margin-bottom: 100px;
+}
+
+.payment__title {
+    margin-bottom: 25px;
+}
+
+.payment__desc,
+.payment__options {
+    margin-bottom: 60px;
+}
+
+.payment__options svg {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+}
+
+.payment__options .active-payment-svg {
+    opacity: 1;
+}
+
+.payment__form {
+    max-width: 1200px;
+}
+
+.payment__desc {
+    opacity: 0.5;
+}
+
+.payment__form img {
+    margin-right: 130px;
+}
+
+.payment__main h2 {
+    margin-bottom: 50px;
+}
+
+.card-details {
+    margin-bottom: 16px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.number-details {
+    margin-bottom: 16px;
+    gap: 15px;
+}
+
+.number-details input {
+    width: 30%;
+}
+
+.number-details input:not(:last-child) {
+    margin-right: 15px;
+}
+
+.input-with-image {
+    background: url("/assets/images/lock-icon.svg") no-repeat right 20px center;
+    background-size: 30px;
+}
+
+.card-details input,
+.number-details input {
+    padding: 12px 16px;
+    border: 1px solid rgba(10, 54, 65, 0.50);
+    border-radius: 40px;
+}
+
+.input-decor {
+    background: url("/assets/images/u_question-circle.svg") no-repeat right 20px center;
+}
+
+.desc {
+    padding: 10px;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.pay {
+    width: 100%;
+    padding: 12px 0;
+    border: 1px solid #0A3641;
+    border-radius: 20px;
+    background-color: var(--button-color);
+}
+
+.tippy-box {
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+}
+
+.tippy-box[data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: var(--color-primary);
+  }
+

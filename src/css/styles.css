@@ -698,13 +698,12 @@ input[type="checkbox"] {
 
 .popup-desc {
   font-size: 15px;
-}
-
-.popup-desc {
+  color: rgba(10, 54, 65, 0.60);
   line-height: 150%;
 }
 
 .popup-desc span {
+  color: var(--text-primary);
   font-weight: 600;
 }
 

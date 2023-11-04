@@ -1,6 +1,6 @@
 @import url("./_reset.css");
 @import url("./_variables.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&display=swap');
 /* @font-face {
   font-family: "Roboto", "serif";
   src: local("Roboto"),
