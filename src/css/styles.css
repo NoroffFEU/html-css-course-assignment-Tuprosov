@@ -1,3 +1,36 @@
+.body-index {
+  background-color: #F9EBE3;
+}
+
+/* header */
+
+.icons__link:not(:nth-child(2)) svg {
+  stroke: #FFBFB1;
+}
+
+.icons__link:nth-child(2) svg path {
+  fill: #FFBFB1;
+}
+
+.header {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header:hover {
+  background-color: var(--color-primary);
+}
+
+.header:hover .nav__link {
+  color: #0A3641;
+}
+
+.header:hover .icons__link:not(:nth-child(2)) svg {
+  stroke: #0A3641;
+}
+
+.header:hover .icons__link:nth-child(2) svg path {
+  fill: #0A3641;
+}
 
  /* hero */
 
