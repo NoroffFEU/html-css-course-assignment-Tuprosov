@@ -1,7 +1,12 @@
 
-.handcraft {
+.handcraft,
+.designers,
+.team {
     text-align: center;
-    padding: 134px 497px 80px 497px;
+}
+
+.handcraft__wrapper {
+    padding: 134px 300px 80px 300px;
     background-image: url("/assets/images/handcraft-image.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -22,6 +27,7 @@
 }
 
 .handcraft__desc {
+    max-width: 800px;
     margin-bottom: 25px;
     line-height: 35px;
     color: #fff;
@@ -43,10 +49,6 @@
     max-width: 311px;
 }
 
-.designers {
-    text-align: center;
-}
-
 .designers__title {
     margin-bottom: 25px;
     max-width: 850px;
@@ -59,3 +61,55 @@
     line-height: 35px;
     max-width: 70%;
 }
+
+.about-decor {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.about-image {
+    transition: transform 1s;
+}
+
+.about-image:hover {
+    transform: scale(1.1);
+}
+
+.team__title {
+    margin-bottom: 80px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.team__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    gap: 100px;
+}
+
+.team__item {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team__info {
+    max-width: 380px;
+    text-align: left;
+}
+
+.member__social-list {
+    gap: 25px;
+}
+
+.member__name,
+.member__position,
+.member__social-list,
+.member__desc {
+    margin-bottom: 10px;
+}
+
+.member__desc {
+    line-height: 30px;
+}
+
