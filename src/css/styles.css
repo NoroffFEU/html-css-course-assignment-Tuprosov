@@ -8,7 +8,7 @@
   stroke: #FFBFB1;
 }
 
-.icons__link:nth-child(2) svg path {
+.color-variant path {
   fill: #FFBFB1;
 }
 
@@ -28,7 +28,7 @@
   stroke: #0A3641;
 }
 
-.header:hover .icons__link:nth-child(2) svg path {
+header:hover .color-variant path {
   fill: #0A3641;
 }
 
