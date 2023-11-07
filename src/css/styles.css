@@ -48,6 +48,7 @@ header:hover .color-variant path {
 
 .card {
   flex-direction: column;
+  text-align: center;
   gap: 0.7rem;
   align-items: center;
   width: 300px;
@@ -79,6 +80,7 @@ header:hover .color-variant path {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 1rem;
 }
 

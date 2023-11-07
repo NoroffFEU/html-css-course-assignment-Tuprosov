@@ -136,6 +136,7 @@ section {
 
 .footer__content {
     justify-content: space-between;
+    gap: 50px;
 }
 
 .left {

@@ -128,16 +128,18 @@
     </div>
   </section>
   <section class="trends">
-    <div class="trends__content flex">
-      <h2 class="trends__title">
-        Trending Now
-      </h2>
-      <p class="trends__desc">
-        We have thousands of new accessories for men and women in RainyDays store
-      </p>
-      <div class="trends__btn">
-        <button class="btn-featured btn-reset">Featured Product</button>
-        <button class="btn-new btn-reset">New Product</button>
+    <div class="container">
+      <div class="trends__content flex">
+        <h2 class="trends__title">
+          Trending Now
+        </h2>
+        <p class="trends__desc">
+          We have thousands of new accessories for men and women in RainyDays store
+        </p>
+        <div class="trends__btn">
+          <button class="btn-featured btn-reset">Featured Product</button>
+          <button class="btn-new btn-reset">New Product</button>
+        </div>
       </div>
     </div>
     <div class="slide-container swiper">
@@ -447,7 +449,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper(".slide-content", {
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
 
@@ -455,6 +457,15 @@
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+
+    breakpoints: {
+      990: {
+        slidesPerView: 5
+      },
+      450: {
+        slidesPerView: 4
+      }
+    }
   });
 </script>
 <script>

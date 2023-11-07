@@ -1,4 +1,62 @@
+
+@media (max-width: 1150px) {
+    .item__content,
+    .item-2 > .item__content, 
+    .item-3 > .item__content {
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .item__title {
+        font-size: 1.5rem;
+    }
+
+    .item__desc {
+        font-size: 1rem;
+    }
+
+    .item__btn > button {
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    .service__title, .info__title, .company__title, .payments__title {
+        font-size: 15px;
+    }
+
+    .service__list, .info__list, .company__list {
+        font-size: 12px;
+    }
+
+    .middle__logo {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .payments__methods {
+        display: flex;
+        gap: 0;
+    }
+
+    .payments__methods svg {
+        width: 100px;
+    }
+
+    .icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .social__list {
+        gap: 5px;
+    }
+}
+
 @media(max-width: 1024px) {
+
+    section {
+        margin-bottom: 2rem;
+    }
 
     .header__container {
         padding-top: 10px;
@@ -120,5 +178,179 @@
     
     .stop-scroll {
         overflow: hidden;
+    }
+
+    .card {
+        width: 30%;
+        padding: 20px;
+    }
+
+    .card__ellipse {
+        padding: 10px;
+    }
+
+    .card__ellipse svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card__title {
+        font-size: 15px;
+    }
+
+    .card__desc {
+        font-size: 12px;
+    }
+
+    .trends__title, .collect_title {
+        font-size: 1rem;
+    }
+
+    .trends__desc {
+        font-size: 15px;
+    }
+
+    .btn-featured, .btn-new {
+        padding: 12px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .news__form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 990px) {
+
+    .item__content,
+    .item-2 > .item__content, 
+    .item-3 > .item__content {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .item__title {
+        font-size: 1.2rem;
+    }
+
+    .item__desc {
+        font-size: 0.8rem;
+    }
+
+    .item__btn > button {
+        padding: 10px 20px;
+        border-radius: 5px;
+    }    
+
+    .middle {
+        display: none;
+    }
+
+    .right {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .social__list {
+        flex-direction: row;
+    }
+
+    .footer__content {
+        gap: 20px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .service, .info, .company {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid__item img {
+        aspect-ratio: 1 / 0.4;
+    }
+
+    .news__form input[type="email"],
+    .news__form .form__btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .burger {
+        margin-right: 30px;
+    }
+
+    .burger__line {
+        height: 2px;
+    }
+
+    .icons {
+        gap: 5px;
+    }
+
+    .icons__link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header__logo {
+        width: 90px;
+        height: 50px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card {
+        width: 60%;
+    }
+
+    .slide-text {
+        font-size: 12px;
+        line-height: 1rem;
+    }
+
+    .item__content,
+    .item-2 > .item__content, 
+    .item-3 > .item__content {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .item__title {
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .item__desc {
+        margin-bottom: 5px;
+        font-size: 0.5rem;
+    }
+
+    .item__btn > button {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }  
+
+    .news__content {
+        padding: 20px;
+    }
+
+    .news__form {
+        width: 100%;
     }
 }
