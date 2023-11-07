@@ -1,0 +1,124 @@
+@media(max-width: 1024px) {
+
+    .header__container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header__logo {
+        width: 120px;
+        height: 60px;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        margin-right: 86px;
+        outline: none;
+        width: 30px;
+        height: 23px;
+        z-index: 1500;
+    }
+
+    .burger:after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        bottom: -4px;
+        left: -4px;
+        right: -4px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    .burger__line {
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-primary);
+        transform: translateX(-50%);
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    /* change burger color on other pages */
+    .header-jp .header__container .burger .burger__line {
+        background-color: var(--text-primary);
+    }
+
+    .header:hover .burger__line {
+        background-color: #0a3641;
+    }
+
+    .burger--active .burger__line {
+        background-color: black;
+    }
+
+    .burger__line:first-child {
+        top: 0;
+    }
+
+    .burger__line:nth-child(2) {
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .burger__line:last-child {
+        bottom: 0;
+    }
+
+    .burger--active .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger--active .burger__line:first-child {
+        left: 25%;
+        top: 50%;
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+
+    .burger--active .burger__line:last-child {
+        bottom: auto;
+        top: 50%;
+        left: 25%;
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        min-width: 320px;
+        height: 100vh;
+        z-index: 1000;
+        padding: 70px 70px;
+        background-color: #fff;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 32px 32px;
+        overflow-y: auto;
+        visibility: hidden;
+        transform: translateX(-120%);
+        transition: visibilty 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .nav .nav__list {
+        flex-direction: column;
+    }
+
+    .nav--active {
+        visibility: visible;
+        transform: none;
+        z-index: 1200;
+    }
+
+    .nav__link {
+        color: var(--text-primary);
+    }
+    
+    .stop-scroll {
+        overflow: hidden;
+    }
+}

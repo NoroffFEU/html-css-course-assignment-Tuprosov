@@ -21,7 +21,7 @@
 }
 
 .header:hover .nav__link {
-  color: #0A3641;
+  color: var(--text-primary);
 }
 
 .header:hover .icons__link:not(:nth-child(2)) svg {
@@ -819,7 +819,6 @@ input[type="checkbox"] {
   border: 1px solid rgba(10, 54, 65, 0.50);
   cursor: pointer;
 }
-
 
 .closePopup {
   position: absolute;

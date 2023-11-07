@@ -88,6 +88,10 @@ section {
 
 /* header */
 
+.burger {
+    display: none;
+}
+
 .header {
     position: absolute;
     width: 100%;
@@ -96,13 +100,18 @@ section {
 .header__container {
     padding-top: 25px;
     padding-bottom: 25px;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__logo {
     height: 120px;
+    /* margin-right: auto; */
 }
+
+/* .nav {
+    margin-right: auto;
+} */
 
 .nav__list {
     gap: 30px;
@@ -148,6 +157,10 @@ section {
 
 .right {
     gap: 90px;
+}
+
+.payments {
+    text-align: center;
 }
 
 .payments__methods {
