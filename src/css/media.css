@@ -1,4 +1,36 @@
 
+@media (max-width: 1350px) {
+    .top__item-1,
+    .bott__item-1 {
+        display: none;
+    }
+
+    .top-jp {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bott-jp {
+        grid-template-columns: auto;
+    }
+
+    .review,
+    .comment-wrapper {
+        max-width: 100%;
+    }
+
+    .related__title {
+        text-align: center;
+    }
+
+    .related__list {
+        justify-content: center;
+    }
+
+    .next-btn {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1150px) {
     .item__content,
     .item-2 > .item__content, 
@@ -49,6 +81,12 @@
 
     .social__list {
         gap: 5px;
+    }
+
+    /* jacket html */
+
+    .midd-jp {
+        grid-template-rows: max-content;
     }
 }
 
@@ -219,6 +257,24 @@
     .news__form {
         width: 70%;
     }
+
+    /* jacket html */
+
+    .midd__item-1 {
+        display: none;
+    }
+
+    .midd-jp {
+        grid-template-columns: auto;
+    }
+
+    .related {
+        text-align: center;
+    }
+
+    .related__wrapper {
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -266,13 +322,29 @@
     .service, .info, .company {
         text-align: center;
     }
+
+    /* jacket html */
+
+    .top__item-3 {
+        grid-row: 2;
+    }
+
+    .top-jp {
+        grid-template-rows: max-content;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .top__item-2 {
+        width: 60%;
+    }
+
+    .top__item-3 {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
-    .grid-container {
-        display: flex;
-        flex-direction: column;
-    }
 
     .grid__item img {
         aspect-ratio: 1 / 0.4;
@@ -281,6 +353,50 @@
     .news__form input[type="email"],
     .news__form .form__btn {
         width: 100%;
+    }
+
+    /* jacket html */
+
+    .item-3-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .item-3-desc, 
+    .item-3-color,
+    .item-3-info,
+    .item-3-quantity,
+    .item-3-share {
+        font-size: 15px;
+    }
+
+    .midd-jp-title div {
+        font-size: 1rem;
+    }
+
+    .paragraph {
+        padding: 1rem;
+    }
+
+    .item-2-desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    /* jacket html*/
+
+    .writeReview,
+    .nextProducts {
+        font-size: 12px;
+    }
+
+    .comment-wrapper {
+        font-size: 15px;
+    }
+
+    .related__desc {
+        font-size: 15px;
     }
 }
 
@@ -353,4 +469,24 @@
     .news__form {
         width: 100%;
     }
+
+    /* jacket html */
+
+    .bott-jp {
+        grid-template-rows: auto;
+    }
+
+    .top__item-2 {
+        width: 100%;
+    }
+
+    .comment-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .related__list {
+        gap: 10px;
+    }
+
 }

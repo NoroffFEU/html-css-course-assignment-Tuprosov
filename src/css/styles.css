@@ -303,7 +303,7 @@ input[type="checkbox"] {
   margin-bottom: 50px;
   gap: 50px;
   grid-template-rows: 850px;
-  grid-template-columns: 20% 35% 35%;
+  grid-template-columns: 1.2fr 2fr 2fr;
 }
 
 .top__item-1,
@@ -413,7 +413,12 @@ input[type="checkbox"] {
   align-self: flex-start;
 }
 
+.item-3-review a svg {
+  vertical-align: middle;
+}
+
 .item-3-review {
+  align-items: center;
   gap: 10px;
 }
 
@@ -471,16 +476,15 @@ input[type="checkbox"] {
 
 .item-3-quantity {
   margin-bottom: 20px;
-  grid-template-columns: 20% 30% 35%;
-  grid-template-rows: 20px 40px;
-  grid-row-gap: 20px;
-  grid-template-areas: 
-    'label label label'
-    'input add wishlist';
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item-3-quantity label {
+  width: 100%;
 }
 
 .item-3-quantity input {
-  grid-area: input;
   padding: 10px;
   width: 60px;
   height: 40px;
@@ -488,7 +492,6 @@ input[type="checkbox"] {
 }
 
 .item-3-quantity .addToCart {
-  grid-area: add;
   max-width: fit-content;
   padding: 11px;
   background-color: #A73131;
@@ -499,7 +502,6 @@ input[type="checkbox"] {
 }
 
 .item-3-quantity .wishlist {
-  grid-area: wishlist;
   align-items: center;
 }
 
@@ -579,6 +581,7 @@ input[type="checkbox"] {
 
 .item-1__title {
   position: absolute;
+  text-align: center;
   left: 15%;
   bottom: 40%;
   color: #EBBDA0;
@@ -625,6 +628,7 @@ input[type="checkbox"] {
 }
 
 .comment-wrapper {
+  align-items: center;
   max-width: 67%;
   padding: 13px 33px;
   justify-content: space-between;
@@ -634,6 +638,7 @@ input[type="checkbox"] {
 
 .comments,
 .grade {
+  align-items: center;
   gap: 10px;
 }
 
