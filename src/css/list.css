@@ -38,7 +38,7 @@
 }
 
 .product-type {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .product-type input {
@@ -63,6 +63,7 @@
 }
 
 .select-wrapper {
+    position: relative;
     justify-content: space-between;
     font-size: 16px;
 }
@@ -71,8 +72,16 @@
     align-items: center;
 } 
 
-.filter__title {
-    margin-right: 25px;
+.filter__btn { 
+    display: none;
+    padding: 10px;
+    border: 1px solid rgb(10, 54, 65, 0.5);
+    border-radius: 10px;
+}
+
+.filter__btn:hover {
+    transform: scale(1.1);
+    background-color: var(--color-primary); 
 }
 
 .filter label:not(:last-child), .sort label{
