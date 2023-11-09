@@ -5,12 +5,18 @@
 .contacts__list {
     margin-bottom: 80px;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .contacts__item {
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
+    text-align: center;
     gap: 20px;
+    flex-grow: 1;
 }
 
 .svg-wrapper {
@@ -27,10 +33,12 @@
 .contacts__wrapper {
     align-items: center;
     gap: 120px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .map {
-    width: 50%;
+    min-width: 50%;
 }
 
 .map iframe {
@@ -39,7 +47,7 @@
 }
 
 .contacts__form {
-    width: 30%;
+    min-width: 30%;
     flex-direction: column;
     gap: 30px;
 }
