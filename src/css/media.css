@@ -461,6 +461,34 @@
         background-color: #fff;
     }
 
+    .news__form input[type="email"] {
+        padding: 10px;
+    }
+
+    /* about */
+
+    .member__desc {
+        font-size: 12px;
+        line-height: 1rem;
+    }
+
+    .handcraft__title,
+    .designers__title,
+    .team__title {
+        font-size: 1.5rem;
+    }
+
+    .handcraft__desc,
+    .designers__desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .readMore,
+    .purchaseNow {
+        font-size: 12px;
+    }
+
 }
 
 @media (max-width: 450px) {
