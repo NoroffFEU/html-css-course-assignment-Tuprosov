@@ -55,7 +55,7 @@
 }
 
 .input-with-image {
-    background: url("/assets/images/lock-icon.svg") no-repeat right 20px center;
+    background: url("../../assets/images/lock-icon.svg") no-repeat right 20px center;
     background-size: 30px;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .input-decor {
-    background: url("/assets/images/u_question-circle.svg") no-repeat right 20px center;
+    background: url("../../assets/images/u_question-circle.svg") no-repeat right 20px center;
 }
 
 .desc {
