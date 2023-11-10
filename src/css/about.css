@@ -8,7 +8,7 @@
 .handcraft__wrapper {
     min-height: 500px;
     padding: 40px;
-    background-image: url("/assets/images/handcraft-image.jpg");
+    background-image: url("../../assets/images/handcraft-image.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

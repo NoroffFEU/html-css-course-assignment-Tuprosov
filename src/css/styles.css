@@ -548,7 +548,7 @@ input[type="checkbox"] {
 
 .midd__item-1 {
   position: relative;
-  background-image: url("/assets/images/cycling-outfit.jpg");
+  background-image: url("../../assets/images/cycling-outfit.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
