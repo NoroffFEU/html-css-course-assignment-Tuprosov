@@ -23,15 +23,12 @@
 }
 
 .payment__form {
+    gap: 120px;
     max-width: 1200px;
 }
 
 .payment__desc {
     opacity: 0.5;
-}
-
-.payment__form img {
-    margin-right: 130px;
 }
 
 .payment__main h2 {
@@ -46,7 +43,7 @@
 
 .number-details {
     margin-bottom: 16px;
-    gap: 15px;
+    justify-content: space-between;
 }
 
 .number-details input {
@@ -92,7 +89,7 @@
     color: var(--text-primary);
 }
 
-.tippy-box[data-placement^='right'] > .tippy-arrow::before {
-    border-right-color: var(--color-primary);
+.tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: var(--color-primary);
   }
 
