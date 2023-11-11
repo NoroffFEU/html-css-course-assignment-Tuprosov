@@ -649,6 +649,7 @@ input[type="checkbox"] {
 
 .related__title {
   display: inline-block;
+  font-size: 1rem;
   margin-bottom: 50px;
   font-weight: 600;
 }

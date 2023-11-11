@@ -90,7 +90,7 @@
         <div class="top-jp grid">
             <div class="top__item-1">
                 <div class="item__header">
-                    <h2>NEW PRODUCTS</h2>
+                    <h2 tabindex="1">NEW PRODUCTS</h2>
                 </div>
                 <div class="content-wrapper">
                     <ul class="product__list list-reset">
@@ -111,7 +111,7 @@
                             <p class="product__desc">Product name <br>120.00$</p>
                         </li>
                     </ul>
-                    <a class="new-products" href="#">All new products</a>
+                    <a class="new-products" href="#" tabindex="1">All new products</a>
                 </div>
             </div>
             <div class="top__item-2">
@@ -125,14 +125,14 @@
                 </div>
             </div>
             <div class="top__item-3">
-                <h2 class="item-3-title">
+                <h2 tabindex="0" class="item-3-title">
                     Rain jacket featured pro
                 </h2>
-                <p class="item-3-desc">
+                <p tabindex="0" class="item-3-desc">
                     Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable fit.
                     Accessorize with a straw hat and you're ready for summer!Faded short sleeves t-shirt with high
                     neckline. <br>
-                    <span>$100.00</span>
+                    <span aria-label="Price 100$">$100.00</span>
                 </p>
                 <div class="item-3-info flex">
                     <div class="stars-rating flex">
@@ -215,7 +215,7 @@
                         </a>
                     </div>
                     <div class="size-selector">
-                        <label for="size">Size: <span></span></label>
+                        <label tabindex="0" for="size">Size: <span></span></label>
                         <select id="size" name="size">
                             <option value="xs">XS</option>
                             <option value="s">S</option>
@@ -226,14 +226,14 @@
                     </div>
                 </div>
                 <div class="item-3-color">
-                    <div class="color-name">Color: Red/Black</div>
+                    <p tabindex="0" class="color-name">Color: Red/Black</p>
                     <div class="color-group flex">
                         <div class="color color-red"></div>
                         <div class="color color-green"></div>
                     </div>
                 </div>
                 <div class="item-3-quantity flex">
-                    <label for="quantity">Quantity</label>
+                    <label tabindex="0" for="quantity">Quantity</label>
                     <input type="number" id="quantity" name="quantity" value="1" min="1">
                     <button class="btn-reset addToCart">ADD TO CART</button>
                     <div class="wishlist flex">
@@ -247,9 +247,9 @@
                     </div>
                 </div>
                 <div class="item-3-share">
-                    <div class="title">Share</div>
+                    <p tabindex="0" class="title">Share</p>
                     <div class="social-wrapper">
-                        <a class="icon" href="#">
+                        <a class="icon" href="#" aria-label="Instagram page">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -262,7 +262,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <a class="icon" href="#">
+                        <a class="icon" href="#" aria-label="Facebook page">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -277,18 +277,18 @@
         <div class="midd-jp grid">
             <div class="midd__item-1">
                 <div class="decor">
-                    <h3 class="item-1__title">Trendy Collection</h3>
-                    <a href="#" class="btn-reset shop-now-btn">
+                    <h3 class="item-1__title" tabindex="1">Trendy Collection</h3>
+                    <a href="#" class="btn-reset shop-now-btn" tabindex="1">
                         SHOP NOW
                     </a>
                 </div>
             </div>
             <div class="midd__item-2 flex">
                 <div class="midd-jp-title">
-                    <div>DESCRIPTION</div>
+                    <div tabindex="0">DESCRIPTION</div>
                 </div>
                 <div class="paragraph">
-                    <p class="item-2-desc">
+                    <p tabindex="0" class="item-2-desc">
                         Faded short sleeves t-shirt with high neckline. Soft and stretchy material for a comfortable
                         fit. Accessorize with a straw hat and you're ready for summer! <br>
                         Sample Unordered List <br>
@@ -303,8 +303,8 @@
             </div>
         </div>
         <div class="popup" style="display: none;">
-            <div class="popup-title">Write your review</div>
-            <button class="closePopup" onclick="closePopUp()"></button>
+            <h3 class="popup-title" tabindex="0">Write your review</h3>
+            <button class="closePopup" onclick="closePopUp()" aria-label="Close review window"></button>
             <div class="popup-content flex">
                 <div class="popup-top flex">
                     <img src="assets/images/jacket-1.webp" alt="raindays jacket">
@@ -380,7 +380,7 @@
         <div class="bott-jp grid">
             <div class="bott__item-1">
                 <div class="item__header">
-                    <h2>BEST SELLERS</h2>
+                    <h2 tabindex="1">BEST SELLERS</h2>
                 </div>
                 <div class="content-wrapper">
                     <ul class="product__list list-reset">
@@ -401,7 +401,7 @@
                             <p class="product__desc">Product name <br>120.00$</p>
                         </li>
                     </ul>
-                    <a class="new-products" href="#">All new products</a>
+                    <a class="new-products" href="#" tabindex="1">All new products</a>
                 </div>
             </div>
             <div class="bott__item-2 flex">
@@ -446,7 +446,7 @@
                     </div>
                 </div>
                 <div class="related flex">
-                    <div class="related__title">RELATED PRODUCTS</div>
+                    <h2 class="related__title" tabindex="0">RELATED PRODUCTS</h2>
                     <div class="related__wrapper">
                         <ul class="list-reset related__list flex">
                             <li class="related__item">
