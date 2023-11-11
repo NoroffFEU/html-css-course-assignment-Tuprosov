@@ -15,7 +15,7 @@
 <body>
     <header class="header-jp">
         <div class="container header__container flex">
-            <button class="btn-reset burger">
+            <button class="btn-reset burger" aria-label="open menu">
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
@@ -46,21 +46,21 @@
                 </ul>
             </nav>
             <div class="icons flex">
-                <a class="icons__link" href="">
+                <a class="icons__link" href="#" aria-label="my page">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                         <path
                             d="M20.262 15.6702L19.5741 16.2084L20.3866 16.5291C22.8454 17.4995 24.9919 19.1171 26.5963 21.2079C28.2004 23.2984 29.2022 25.7834 29.4944 28.3965C29.5222 28.6574 29.4455 28.9191 29.2801 29.1248C29.1197 29.3241 28.8884 29.4552 28.6335 29.491L28.4991 29.4909L28.4961 29.491C28.2462 29.4925 28.0051 29.4019 27.8192 29.2373C27.6333 29.0728 27.5158 28.8462 27.4886 28.6014L27.4885 28.6006C27.1436 25.5471 25.6797 22.7277 23.3772 20.6806C21.0747 18.6336 18.0952 17.5024 15.0078 17.5024C11.9204 17.5024 8.94085 18.6336 6.63841 20.6806C4.3359 22.7277 2.87195 25.5471 2.52706 28.6006L2.52694 28.6018C2.49763 28.8667 2.36363 29.1099 2.15342 29.2775C1.94311 29.4452 1.6739 29.5233 1.40506 29.4939C1.13624 29.4645 0.890889 29.3302 0.722603 29.1214L0.334274 29.4345L0.722602 29.1214C0.639289 29.0181 0.577377 28.8996 0.540267 28.7728L0.0614201 28.9129L0.540267 28.7728C0.503185 28.646 0.491563 28.5133 0.50603 28.3822C0.796788 25.7762 1.79318 23.2973 3.38929 21.2098C4.98546 19.1221 7.12161 17.5041 9.57023 16.5285L10.3786 16.2064L9.69328 15.6702C8.2972 14.5778 7.2786 13.0802 6.7787 11.386C6.2788 9.69182 6.3223 7.88485 6.90317 6.21635C7.48405 4.54781 8.57359 3.10034 10.0207 2.07562C11.4679 1.05088 13.2005 0.5 14.9776 0.5C16.7548 0.5 18.4874 1.05088 19.9346 2.07562C21.3817 3.10034 22.4712 4.54781 23.0521 6.21635C23.633 7.88485 23.6765 9.69182 23.1766 11.386C22.6767 13.0802 21.6581 14.5778 20.262 15.6702ZM11.351 14.4054C12.4248 15.1189 13.6868 15.4996 14.9776 15.4996C16.7085 15.4996 18.3691 14.8158 19.5938 13.5978C20.8187 12.3797 21.5073 10.7269 21.5073 9.00305C21.5073 7.71755 21.124 6.46113 20.4061 5.39271C19.6883 4.32432 18.6683 3.49203 17.4755 3.00066C16.2827 2.5093 14.9704 2.38078 13.7043 2.63124C12.4382 2.8817 11.2748 3.49998 10.3615 4.40833C9.44808 5.31671 8.82574 6.47439 8.57358 7.73512C8.32142 8.99587 8.45086 10.3026 8.94543 11.4901C9.43998 12.6775 10.2773 13.6919 11.351 14.4054Z"
                             fill="#0A3641" stroke="black" />
                     </svg>
                 </a>
-                <a class="icons__link" href="">
+                <a class="icons__link" href="#" aria-label="wishlist">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
                         <path
                             d="M27.2649 2.96623C25.6745 1.28855 23.5662 0.264585 21.3209 0.0793095C19.0756 -0.105966 16.8414 0.559659 15.0218 1.95595C13.1128 0.462059 10.7367 -0.215343 8.372 0.0601574C6.00729 0.335657 3.82963 1.54359 2.27753 3.44072C0.725436 5.33784 -0.0857969 7.78324 0.00719494 10.2845C0.100187 12.7857 1.0905 15.1569 2.7787 16.9207L12.0961 26.7393C12.8763 27.5472 13.9271 28 15.0218 28C16.1165 28 17.1673 27.5472 17.9476 26.7393L27.2649 16.9207C29.0167 15.0663 30 12.558 30 9.94346C30 7.32894 29.0167 4.82061 27.2649 2.96623ZM25.1494 14.7423L15.832 24.5451C15.726 24.6578 15.5998 24.7472 15.4607 24.8082C15.3217 24.8692 15.1725 24.9007 15.0218 24.9007C14.8711 24.9007 14.722 24.8692 14.5829 24.8082C14.4438 24.7472 14.3176 24.6578 14.2116 24.5451L4.89424 14.6949C3.71757 13.4295 3.05868 11.7296 3.05868 9.95925C3.05868 8.18895 3.71757 6.48903 4.89424 5.22357C6.09327 3.97807 7.71041 3.27968 9.39538 3.27968C11.0803 3.27968 12.6975 3.97807 13.8965 5.22357C14.036 5.37152 14.2019 5.48896 14.3848 5.5691C14.5676 5.64924 14.7637 5.6905 14.9618 5.6905C15.1599 5.6905 15.356 5.64924 15.5388 5.5691C15.7216 5.48896 15.8876 5.37152 16.0271 5.22357C17.2261 3.97807 18.8432 3.27968 20.5282 3.27968C22.2132 3.27968 23.8303 3.97807 25.0294 5.22357C26.2222 6.47245 26.9027 8.16315 26.9251 9.9335C26.9476 11.7038 26.3101 13.413 25.1494 14.6949V14.7423Z"
                             fill="black" />
                     </svg>
                 </a>
-                <a class="icons__link" href="cart.html">
+                <a class="icons__link" href="cart.html" aria-label="my cart">
                     <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
                         <g clip-path="url(#clip0_767_1627)">
                             <path
@@ -88,9 +88,10 @@
     </nav>
     <main class="payment">
         <div class="container">
-            <h1 class="payment__title">Pay with</h1>
+            <h1 role="heading" class="payment__title" tabindex="0">Pay with</h1>
             <div class="payment__options flex">
-                <svg width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg role="button" width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svgTitle-1" tabindex="0">
+                    <title id="svgTitle-1">Klarna</title>
                     <g filter="url(#filter0_d_349_1125)">
                         <rect x="20" y="16" width="100" height="60" rx="15" fill="#F4B6C7" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -113,7 +114,8 @@
                         </filter>
                     </defs>
                 </svg>
-                <svg class="active-payment-svg" width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg role="button" class="active-payment-svg" width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svgTitle-2" tabindex="0">
+                    <title id="svgTitle-2">Visa</title>
                     <g filter="url(#filter0_d_349_978)">
                         <rect x="20" y="20" width="100" height="60.6557" rx="15.875" fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -135,7 +137,8 @@
                         </filter>
                     </defs>
                 </svg>
-                <svg width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg role="button" width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svgTitle-3" tabindex="0">
+                    <title id="svgTitle-3">Google Pay</title>
                     <g filter="url(#filter0_d_349_1087)">
                         <rect x="20" y="20" width="100" height="60.6557" rx="15.875" fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -170,7 +173,8 @@
                         </filter>
                     </defs>
                 </svg>
-                <svg width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg role="button" width="140" height="100" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svgTitle-4" tabindex="0">
+                    <title id="svgTitle-4">Mastercard</title>
                     <g filter="url(#filter0_d_349_1023)">
                         <rect x="20" y="20" width="100" height="61.4754" rx="15.875" fill="white" />
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -201,7 +205,7 @@
                 </svg>
             </div>
             <p class="payment__desc">All transaction are secured and encoded.</p>
-            <form class="payment__form flex" action="#" method="post" id="payment">
+            <form class="payment__form flex" action="#" method="post" id="payment" aria-label="payment form">
                 <img src="assets/images/card-payment.png" alt="image of a bank card">
                 <div class="payment__main">
                     <h2>Debit/Credit card</h2>
@@ -220,7 +224,7 @@
                         <p>Total to pay</p>
                         <p>210.00 USD</p>
                     </div>
-                    <button class="btn-reset pay" type="submit">Pay</button>
+                    <button class="btn-reset pay" type="submit" aria-label="Pay">Pay</button>
                 </div>
             </form>
         </div>
@@ -265,14 +269,16 @@
                 </div>
                 <div class="middle">
                     <a class="middle__logo" href="#"><img src="assets/images/footer-logo.png"
-                            alt="company logo in dark color"></a>
+                        alt="company logo in dark color">
+                    </a>
                 </div>
                 <div class="right flex">
                     <div class="payments">
                         <h3 class="payments__title">SECURE AND EASY PAYMENTS</h3>
                         <div class="payments__methods">
-                            <svg width="140" height="100" viewBox="0 0 140 100" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg role="img" width="140" height="100" viewBox="0 0 140 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="footer-svgTitle-1" tabindex="0">
+                                <title id="footer-svgTitle-1">Klarna</title>
                                 <g filter="url(#filter0_d_349_1125)">
                                     <rect x="20" y="16" width="100" height="60" rx="15" fill="#F4B6C7" />
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -280,7 +286,7 @@
                                         fill="#17120F" />
                                 </g>
                                 <defs>
-                                    <filter id="filter0_d_349_1125" x="0" y="0" width="140" height="100"
+                                    <filter x="0" y="0" width="140" height="100"
                                         filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                         <feflood flood-opacity="0" result="BackgroundImageFix" />
                                         <fecolormatrix in="SourceAlpha" type="matrix"
@@ -297,8 +303,9 @@
                                     </filter>
                                 </defs>
                             </svg>
-                            <svg width="140" height="100" viewBox="0 0 140 100" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg role="img" width="140" height="100" viewBox="0 0 140 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="footer-svgTitle-2" tabindex="0">
+                                <title id="footer-svgTitle-2">Visa</title>
                                 <g filter="url(#filter0_d_349_978)">
                                     <rect x="20" y="20" width="100" height="60.6557" rx="15.875" fill="white" />
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -306,7 +313,7 @@
                                         fill="#172B85" />
                                 </g>
                                 <defs>
-                                    <filter id="filter0_d_349_978" x="0" y="0" width="140" height="100.656"
+                                    <filter x="0" y="0" width="140" height="100.656"
                                         filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                         <feflood flood-opacity="0" result="BackgroundImageFix" />
                                         <fecolormatrix in="SourceAlpha" type="matrix"
@@ -323,8 +330,9 @@
                                     </filter>
                                 </defs>
                             </svg>
-                            <svg width="140" height="100" viewBox="0 0 140 100" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg role="img" width="140" height="100" viewBox="0 0 140 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="footer-svgTitle-3" tabindex="0">
+                                <title id="footer-svgTitle-3">Google pay</title>
                                 <g filter="url(#filter0_d_349_1087)">
                                     <rect x="20" y="20" width="100" height="60.6557" rx="15.875" fill="white" />
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -344,7 +352,7 @@
                                         fill="#EA4335" />
                                 </g>
                                 <defs>
-                                    <filter id="filter0_d_349_1087" x="0" y="0" width="140" height="100.656"
+                                    <filter x="0" y="0" width="140" height="100.656"
                                         filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                         <feflood flood-opacity="0" result="BackgroundImageFix" />
                                         <fecolormatrix in="SourceAlpha" type="matrix"
@@ -361,8 +369,9 @@
                                     </filter>
                                 </defs>
                             </svg>
-                            <svg width="140" height="100" viewBox="0 0 140 100" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg role="img" width="140" height="100" viewBox="0 0 140 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-labelledby="footer-svgTitle-4" tabindex="0">
+                                <title id="footer-svgTitle-4">Mastercard</title>
                                 <g filter="url(#filter0_d_349_1023)">
                                     <rect x="20" y="20" width="100" height="61.4754" rx="15.875" fill="white" />
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -376,7 +385,7 @@
                                         fill="#FF5E00" />
                                 </g>
                                 <defs>
-                                    <filter id="filter0_d_349_1023" x="0" y="0" width="140" height="101.475"
+                                    <filter x="0" y="0" width="140" height="101.475"
                                         filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                         <feflood flood-opacity="0" result="BackgroundImageFix" />
                                         <fecolormatrix in="SourceAlpha" type="matrix"
@@ -397,7 +406,7 @@
                     </div>
                     <div class="social">
                         <ul class="social__list list-reset flex">
-                            <li class="social__item"><a class="icon" href="#">
+                            <li class="social__item"><a class="icon" href="#" aria-label="Instagram page">
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -412,7 +421,7 @@
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </a></li>
-                            <li class="social__item"><a class="icon" href="#">
+                            <li class="social__item"><a class="icon" href="#" aria-label="Facebook page">
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -421,7 +430,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </a></li>
-                            <li class="social__item"><a class="icon" href="#">
+                            <li class="social__item"><a class="icon" href="#" aria-label="Youtube page">
                                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
