@@ -89,7 +89,7 @@
         <ul class="panel__list list-reset"></ul>
     </nav>
     <div class="container" id="lj">
-        <h1 class="page-title">FOR WOMEN</h1>
+        <h1 class="page-title" tabindex="0">FOR WOMEN</h1>
         <div class="grid-container-ls">
             <aside class="sidebar flex">
                 <div class="top__item-1">
@@ -115,13 +115,13 @@
                                 <p class="product__desc">Product name <br>120.00$</p>
                             </li>
                         </ul>
-                        <a class="new-products" href="#">All new products</a>
+                        <a class="new-products" href="#" tabindex="-1">All new products</a>
                     </div>
                 </div>
                 <div class="midd__item-1">
                     <div class="decor">
                         <h3 class="item-1__title">Trendy Collection</h3>
-                        <a href="#" class="btn-reset shop-now-btn">
+                        <a href="#" class="btn-reset shop-now-btn" tabindex="-1">
                             SHOP NOW
                         </a>
                     </div>
@@ -149,25 +149,25 @@
                                 <p class="product__desc">Product name <br>120.00$</p>
                             </li>
                         </ul>
-                        <a class="new-products" href="#">All new products</a>
+                        <a class="new-products" href="#" tabindex="-1">All best seller</a>
                     </div>
                 </div>
             </aside>
             <main class="main flex">
-                <div class="product-type flex">
-                    <label for="option1">
+                <div class="product-type flex" tabindex="0" aria-label="Choose type of a product">
+                    <label for="option1" tabindex="0">
                         <input type="radio" id="option1" value="sport" name="types">
                         <img src="assets/images/cycling-outfit.jpg" alt="rainydays wear">
                         Sport
                     </label>
 
-                    <label for="option2">
+                    <label for="option2" tabindex="0">
                         <input type="radio" id="option2" value="hike" name="types">
                         <img src="assets/images/adults.jpg" alt="rainydays wear">
                         Hike
                     </label>
 
-                    <label for="option3">
+                    <label for="option3" tabindex="0">
                         <input type="radio" id="option3" value="rain" name="types">
                         <img src="assets/images/hero-background.jpg" alt="rainydays wear">
                         Rain
@@ -175,15 +175,15 @@
                 </div>
                 <div class="select-wrapper flex">
                     <button class=" btn-reset filter__btn">Filter</button>
-                    <div class="filter flex">
-                        <label for="color">Color</label>
+                    <div class="filter flex" tabindex="0" aria-label="filter by">
+                        <label for="color" tabindex="0">Color</label>
                         <select name="color" id="color">
                             <option value="red">Red</option>
                             <option value="black">Black</option>
                             <option value="yellow">Yellow</option>
                             <option value="purple">Purple</option>
                         </select>
-                        <label for="size">Size</label>
+                        <label for="size" tabindex="0">Size</label>
                         <select name="size" id="size">
                             <option value="xs">XS</option>
                             <option value="s">S</option>
@@ -191,14 +191,14 @@
                             <option value="l">L</option>
                             <option value="xl">XL</option>
                         </select>
-                        <label for="price">Price</label>
+                        <label for="price" tabindex="0">Price</label>
                         <select name="price" id="price">
                             <option value="under 100$">under 100$</option>
                             <option value="100$-250$">100$-250$</option>
                             <option value="250$-350$">250$-350$</option>
                             <option value="350$-500$">350$-500$</option>
                         </select>
-                        <label for="collection">Collection</label>
+                        <label for="collection" tabindex="0">Collection</label>
                         <select name="collection" id="collection">
                             <option value="verglas">Verglas</option>
                             <option value="Good">Good</option>
@@ -206,8 +206,8 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="sort flex">
-                        <label for="sort">Sort:</label>
+                    <div class="sort flex" aria-label="Sort by">
+                        <label for="sort" tabindex="0">Sort:</label>
                         <select name="price" id="sort">
                             <option value="Price">Price</option>
                             <option value="Size">Size</option>
@@ -218,7 +218,7 @@
                 <ul class="list-reset product__list-lj">
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -234,7 +234,7 @@
                                     <p class="product__price">120$</p>
                                 </div>
                                 <div class="desc-right">
-                                    <p class="product__info">XS S M L</p> <br>
+                                    <p class="product__size">XS S M L</p> <br>
                                     <p class="product__color">1 color</p>
                                 </div>
                             </div>
@@ -242,7 +242,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -258,7 +258,7 @@
                                     <p class="product__price">120$</p>
                                 </div>
                                 <div class="desc-right">
-                                    <p class="product__info">XS S M L</p> <br>
+                                    <p class="product__size">XS S M L</p> <br>
                                     <p class="product__color">1 color</p>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -290,7 +290,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -314,7 +314,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -338,7 +338,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -362,7 +362,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -386,7 +386,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -410,7 +410,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -434,7 +434,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -458,7 +458,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -482,7 +482,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -506,7 +506,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -530,7 +530,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -554,7 +554,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -578,7 +578,7 @@
                     </li>
                     <li class="product__item-lj">
                         <a href="#">
-                            <button class="btn-reset add-to-cart">
+                            <button class="btn-reset add-to-wishlist" aria-label="add to wishlist">
                                 <svg width="23" height="21" viewBox="0 0 23 21" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -684,7 +684,7 @@
                 </div>
                 <div class="right flex">
                     <div class="payments">
-                        <h3 class="payments__title" tabindex="0">SECURE AND EASY PAYMENTS</h3>
+                        <h3 class="payments__title">SECURE AND EASY PAYMENTS</h3>
                         <div class="payments__methods">
                             <svg role="img" width="140" height="100" viewbox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="footer-svgTitle-1" tabindex="0">
                                 <title id="footer-svgTitle-1">Klarna</title>
