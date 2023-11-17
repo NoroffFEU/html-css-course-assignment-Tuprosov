@@ -1,0 +1,13 @@
+/* Use this file to store your useful variables */
+/* This could be colors, fonts, or padding sizes! */
+
+:root {
+  --swiper-navigation-sides-offset: 10px;
+  --nav-color: #FFBFB1;
+  --color-primary: #ebbda0;
+  --color-secondary: rgba(235, 189, 160, 0.3);
+  --text-primary: #0a3641;
+  --text-secondary: #357787;
+  --button-text-color: #0a3641;
+  --button-color: #ebbda0;
+}
