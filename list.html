@@ -62,7 +62,7 @@
                             fill="black" />
                     </svg>
                 </a>
-                <a class="icons__link" href="cart.html" aria-label="my cart">
+                <a class="icons__link cart-icon" href="cart.html" aria-label="my cart">
                     <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
                         <g clip-path="url(#clip0_767_1627)">
                             <path
@@ -814,5 +814,20 @@
     })
 </script>
 <script src="js/media.js"></script>
+<script>
+    // Retrieve the cart from local storage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Calculate total quantity
+    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+
+    if(totalQuantity != 0) {
+        // Update the data-quantity attribute if true
+        const cartIcon = document.querySelector('.cart-icon');
+        cartIcon.setAttribute('data-quantity', totalQuantity.toString());
+        // Apply active state to icon
+        cartIcon.classList.add('active');
+    }
+</script>
 
 </html>

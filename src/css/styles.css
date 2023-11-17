@@ -32,6 +32,30 @@ header:hover .color-variant path {
   fill: #0A3641;
 }
 
+.cart-icon {
+  position: relative;
+  font-size: 12px;
+}
+
+.cart-icon::after {
+  opacity: 0;
+  content: attr(data-quantity); 
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-primary);
+  color: var(--color-primary);
+  border-radius: 50%; 
+  padding: 0.3em 0.3em; 
+  position: absolute; 
+  top: -5px;
+  right: -10px; 
+  text-align: center;
+}
+
+.cart-icon.active::after {
+  opacity: 1;
+}
+
  /* hero */
 
 .hero > img {

@@ -44,7 +44,7 @@
     border-top: 1px solid rgba(10, 54, 65, 0.50);
 }
 
-.cart__item svg {
+.removeProduct {
     position: absolute;
     right: 10px;
     top: 10px;
