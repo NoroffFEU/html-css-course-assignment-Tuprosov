@@ -154,6 +154,16 @@ header:hover .color-variant path {
   width: 100%;
 }
 
+.slide-wrapper {
+  --gap: 30px;
+  gap: var(--gap);
+  overflow: hidden;
+}
+
+.slide {
+  flex: 0 0 calc((100% - 4 * var(--gap)) / 5);
+}
+
 .slide-text {
   color: var(--text-primary);
   text-align: center;
