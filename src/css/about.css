@@ -1,0 +1,116 @@
+
+.handcraft,
+.designers,
+.team {
+    text-align: center;
+}
+
+.handcraft__wrapper {
+    min-height: 500px;
+    padding: 40px;
+    background-image: url("../../assets/images/handcraft-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.handcraft__title {
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.handcraft__desc {
+    max-width: 800px;
+    margin-bottom: 25px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.readMore,
+.purchaseNow {
+    width: 50%;
+    max-width: 310px;
+    padding: 13px;
+    border-radius: 20px;
+    border: 1px solid #0A3641;
+    background-color: #fff;
+}
+
+.designers__title,
+.team__title  {
+    margin-bottom: 25px;
+    max-width: 850px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.team__title {
+    max-width: 100%;
+}
+
+.designers__desc {
+    margin-bottom: 25px;
+    line-height: 35px;
+    max-width: 70%;
+}
+
+.about-decor {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.about-image {
+    width: 33.33%;
+    transition: transform 1s;
+}
+
+.about-image:hover {
+    transform: scale(1.1);
+}
+
+
+.team__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    place-content: center;
+}
+
+.team__item {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.team__info {
+    max-width: 380px;
+    text-align: center;
+}
+
+.member__social-list {
+    justify-content: center;
+    gap: 25px;
+}
+
+.member__name,
+.member__position,
+.member__social-list,
+.member__desc {
+    margin-bottom: 10px;
+}
+
+.member__desc {
+    line-height: 30px;
+}
+
