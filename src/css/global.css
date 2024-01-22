@@ -1,15 +1,7 @@
 @import url("./_reset.css");
 @import url("./_variables.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&display=swap');
-/* @font-face {
-  font-family: "Roboto", "serif";
-  src: local("Roboto"),
-    url("/fonts/RobotoSlab-VariableFont_wght.woff2") format("woff2"),
-    url("/fonts/RobotoSlab-VariableFont_wght.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-} */
+
 html {
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
