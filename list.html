@@ -803,6 +803,22 @@
         </div>
     </footer>
 </body>
+<script>
+    let filterBtn = document.querySelector('.filter__btn');
+    let filterBox = document.querySelector('.filter');
+
+    filterBtn.addEventListener('click', function(){
+    filterBox.classList.toggle('is-active');
+    })
+
+    document.addEventListener('click', function (event) {
+    // Check if the click target is not the filter button or the filter box.
+    if (event.target !== filterBtn && !filterBox.contains(event.target)) {
+        // Click occurred outside of the filter box, so hide it.
+        filterBox.classList.remove('is-active');
+    }
+    });
+</script>
 <script src="js/choices.min.js"></script>
 <script>
     const selectors = Array.from(document.querySelectorAll('select'));
@@ -813,7 +829,7 @@
         })
     })
 </script>
-<script src="js/media.js"></script>
+<script src="js/burger.js"></script>
 <script>
     // Retrieve the cart from local storage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -430,6 +430,12 @@
         transition: all .2s cubic-bezier(.25,.46,.45,.94) 0s;
         z-index: 10;
     }
+
+    /* index */
+
+    .slide {
+        flex: 0 0 calc((100% - 3 * var(--gap)) / 4);
+    }
 }
 
 @media (max-width: 768px) {
@@ -456,6 +462,10 @@
     .check label,
     .form__btn {
         font-size: 12px;
+    }
+
+    .slide {
+        flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
     }
 
     /* jacket html */
@@ -641,6 +651,11 @@
     .news__form {
         width: 100%;
     }
+
+    .slide-wrapper {
+        --gap: 20px;
+    }
+
 
     /* jacket html */
 
