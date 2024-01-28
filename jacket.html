@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacket specific page</title>
+    <script type="module" src="js/addtocart.js" defer></script>
+    <script src="js/burger.js" defer></script>
+    <script src="js/popup.js" defer></script>
     <link rel="stylesheet" href="src/css/choices.min.css">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/normalize.css">
@@ -302,9 +305,10 @@
                 </div>
             </div>
         </div>
-        <div class="popup" style="display: none;">
+        <div class="overlay"></div>
+        <div class="popup">
             <h3 class="popup-title" tabindex="0">Write your review</h3>
-            <button class="closePopup" onclick="closePopUp()" aria-label="Close review window"></button>
+            <button class="closePopup" aria-label="Close review window"></button>
             <div class="popup-content flex">
                 <div class="popup-top flex">
                     <img src="assets/images/jacket-1.webp" alt="raindays jacket">
@@ -406,8 +410,7 @@
             </div>
             <div class="bott__item-2 flex">
                 <div class="review">
-                    <button class="btn-reset writeReview" id="writeReview" onclick="openPopUp()">WRITE YOUR
-                        REVIEW</button>
+                    <button class="btn-reset writeReview" id="writeReview">WRITE YOUR REVIEW</button>
                 </div>
                 <div class="comment-wrapper flex">
                     <div class="comments flex">
@@ -696,23 +699,5 @@
         searchEnabled: false,
         itemSelectText: '',
     });
-
-    function openPopUp() {
-        const popup = document.querySelector('.popup');
-        if (popup) {
-            popup.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-    }
-    function closePopUp() {
-        const popup = document.querySelector('.popup');
-        if (popup) {
-            popup.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    }
 </script>
-<script src="js/burger.js"></script>
-<script src="js/addtocart.js"></script>
-
 </html>

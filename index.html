@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raindays-shop for rainy comfort</title>
+    <script type="module" src="js/index.js" defer></script>
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/variables.css">
@@ -13,7 +14,7 @@
 </head>
 
 <body class="body-index">
-    <header class="header" onmouseover="changeTheme()" onmouseout="resetTheme()">
+    <header class="header">
         <div class="container header__container flex">
             <button class="btn-reset burger">
                 <span class="burger__line"></span>
@@ -21,7 +22,7 @@
                 <span class="burger__line"></span>
             </button>
             <a class="header__logo" href="index.html">
-                <img src="assets/images/logo-light.png" alt="Rainydays light logo" id="logo">
+                <img src="assets/images/logo-light.png" alt="Rainydays logo light" id="logo">
             </a>
             <nav class="nav">
                 <ul class="nav__list list-reset flex">
@@ -483,22 +484,6 @@
         </div>
     </footer>
 </body>
-<script src="js/slider.js"></script>
-<script>
-    // change theme to dark while hovering
-    function changeTheme() {
-        const logo = document.getElementById('logo');
-        logo.src = 'assets/images/logo-dark.png';
-        logo.alt = 'Rainydays logo dark';
-    }
-
-    function resetTheme() {
-        const logo = document.getElementById('logo');
-        logo.src = 'assets/images/logo-light.png';
-        logo.alt = 'Rainydays logo dark';
-    }
-</script>
-<script src="js/burger.js"></script>
 <script>
     // Retrieve the cart from local storage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -1,3 +1,4 @@
+import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 const addToCartbtn = document.querySelector('.addToCart');
 
 addToCartbtn.addEventListener('click', () => {
@@ -10,8 +11,6 @@ addToCartbtn.addEventListener('click', () => {
     addToCart(productName, selectedSize, productPrice, selectedQuantity, productImage);
     updateCartIconDisplay();
 });
-
-updateCartIconDisplay();
 
 // Initialize the cart from local storage or set it to an empty array
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -41,21 +40,4 @@ function saveCartToLocalStorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function updateCartIconDisplay() {
-
-    // Retrieve the cart from local storage
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    // Calculate total quantity
-    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-
-    // Check if there are products in the cart
-    if(totalQuantity != 0) {
-        // Update the data-quantity attribute if true
-        const cartIcon = document.querySelector('.cart-icon');
-        cartIcon.setAttribute('data-quantity', totalQuantity.toString());
-        // Apply active state to icon
-        cartIcon.classList.add('active');
-    };
-
-}
+updateCartIconDisplay();

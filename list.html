@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List of jackets</title>
+    <script type="module" src="js/list.js" defer></script>
     <link rel="stylesheet" href="src/css/choices.min.css">
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/variables.css">
@@ -803,22 +804,6 @@
         </div>
     </footer>
 </body>
-<script>
-    let filterBtn = document.querySelector('.filter__btn');
-    let filterBox = document.querySelector('.filter');
-
-    filterBtn.addEventListener('click', function(){
-    filterBox.classList.toggle('is-active');
-    })
-
-    document.addEventListener('click', function (event) {
-    // Check if the click target is not the filter button or the filter box.
-    if (event.target !== filterBtn && !filterBox.contains(event.target)) {
-        // Click occurred outside of the filter box, so hide it.
-        filterBox.classList.remove('is-active');
-    }
-    });
-</script>
 <script src="js/choices.min.js"></script>
 <script>
     const selectors = Array.from(document.querySelectorAll('select'));
@@ -829,21 +814,4 @@
         })
     })
 </script>
-<script src="js/burger.js"></script>
-<script>
-    // Retrieve the cart from local storage
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    // Calculate total quantity
-    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-
-    if(totalQuantity != 0) {
-        // Update the data-quantity attribute if true
-        const cartIcon = document.querySelector('.cart-icon');
-        cartIcon.setAttribute('data-quantity', totalQuantity.toString());
-        // Apply active state to icon
-        cartIcon.classList.add('active');
-    }
-</script>
-
 </html>

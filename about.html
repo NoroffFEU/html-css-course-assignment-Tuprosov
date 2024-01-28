@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+    <script src="js/burger.js" defer></script>
+    <script type="module" src="js/cartIconDisplay.mjs"></script>
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/global.css">
@@ -553,20 +555,4 @@
         </div>
     </footer>
 </body>
-<script src="js/burger.js"></script>
-<script>
-    // Retrieve the cart from local storage
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    // Calculate total quantity
-    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
-
-    if(totalQuantity != 0) {
-        // Update the data-quantity attribute if true
-        const cartIcon = document.querySelector('.cart-icon');
-        cartIcon.setAttribute('data-quantity', totalQuantity.toString());
-        // Apply active state to icon
-        cartIcon.classList.add('active');
-    }
-</script>
 </html>
