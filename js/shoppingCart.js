@@ -58,9 +58,11 @@ function displayCart(){
             `
             productsList.appendChild(item);
 
-            formPrice.textContent = `${element.price.toFixed(2)} USD`;
-            formTax.textContent = `${element.price * 0.1.toFixed(2)} USD`;
-            const totalToPay = cart.reduce((total, item) => total + item.price * item.quantity, 10);
+            const totalCost = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+            formPrice.textContent = `${totalCost.toFixed(2)} USD`;
+            const tax = totalCost * 0.1;
+            const totalToPay = totalCost + tax;
+            formTax.textContent = `${tax.toFixed(2)} USD`;
             totalPay.textContent = `${totalToPay.toFixed(2)} USD`;
         });
     }
