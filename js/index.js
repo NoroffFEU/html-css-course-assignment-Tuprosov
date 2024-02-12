@@ -1,12 +1,10 @@
 import { allProducts } from "./fetch.js";
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 import './burger.js';
-import './slider.js';
+import { initializeSlider } from "./slider.js";
+import {transferProductID} from "./getid.js"
 
-console.log(allProducts)
-const featuredBtn = document.querySelector('.btn-featured');
-const newBtn = document.querySelector('.btn-new');
-const header = document.querySelector('.header');
+
 const slideImg = document.querySelectorAll('.slide-image');
 const slideText = document.querySelectorAll('.slide-text');
 
@@ -24,30 +22,38 @@ function resetTheme() {
     logo.alt = 'Rainydays logo light';
 }
 
-function swtichHeaderLogo (header) {
+function swtichHeaderLogo () {
+    const header = document.querySelector('.header');
     header.addEventListener('mouseover', changeTheme)
     header.addEventListener('mouseout' ,resetTheme)
 }
 
-// add click events
-featuredBtn.addEventListener('click', displayFeatureProducts);
-newBtn.addEventListener('click', displayNewProducts);
+// change products on display on click
+function clickEvents(){
+    const featuredBtn = document.querySelector('.btn-featured');
+    const newBtn = document.querySelector('.btn-new');
+    featuredBtn.addEventListener('click', displayFeaturedProducts);
+    newBtn.addEventListener('click', displayNewProducts);
+}
 
-// change products on display accordingly
-function displayFeatureProducts() {
+function displayFeaturedProducts() {
     for (let i = 0; i<slideImg.length; i++) {
-       slideImg[i].innerHTML = `<a href="jacket.html"><img src="${allProducts[i].image}" alt="${allProducts[i].description}"></a>`
+       slideImg[i].innerHTML = `<a class="image-link"><img src="${allProducts[i].image}" id="${allProducts[i].id}" alt="${allProducts[i].description}"></a>`
        slideText[i].innerHTML = `${allProducts[i].title}<br>$${allProducts[i].price}` 
     }
 }
 
 function displayNewProducts() {
     for (let i = 0; i<slideImg.length; i++) {
-        slideImg[i].innerHTML = `<a href="jacket.html"><img src="${allProducts[i+1].image}" alt="${allProducts[i+1].description}"></a>`
+        slideImg[i].innerHTML = `<a class="image-link"><img src="${allProducts[i+1].image}" id="${allProducts[i].id}" alt="${allProducts[i+1].description}"></a>`
         slideText[i].innerHTML = `${allProducts[i+1].title}<br>$${allProducts[i+1].price}` 
      }
 }
 
-swtichHeaderLogo(header);
+
+initializeSlider();
+displayFeaturedProducts()
+swtichHeaderLogo();
 updateCartIconDisplay();
-displayFeatureProducts()
+clickEvents()
+transferProductID();

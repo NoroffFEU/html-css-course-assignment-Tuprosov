@@ -15,7 +15,8 @@ async function getAllProducts(){
 }
 
 export const allProducts = await getAllProducts();
-
+export const menProducts = allProducts.filter(item => item.gender.toLowerCase() === 'male')
+export const womenProducts = allProducts.filter(item => item.gender.toLowerCase() === 'female')
 
 
 

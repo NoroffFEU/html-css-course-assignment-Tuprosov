@@ -187,6 +187,7 @@ header:hover .color-variant path {
 .slide-image {
   border-radius: 20px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* collections */

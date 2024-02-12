@@ -122,6 +122,7 @@
 
 .product__item-lj {
     position: relative;
+    cursor: pointer;
 }
 
 .product__item-lj img {
@@ -129,10 +130,10 @@
     padding: 60px 0;
     border: 1px solid rgb(10, 54, 65, 0.5);
     border-radius: 10px;
+    aspect-ratio: 1 / 1.4;
 }
 
 .desc-wrapper {
-    padding: 0 10px;
     justify-content: space-between;
     font-size: 16px;
 }
