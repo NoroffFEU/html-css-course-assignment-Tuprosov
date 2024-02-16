@@ -1,5 +1,5 @@
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
-import { allProducts } from "./fetch.js";
+
 
 const addToCartbtn = document.querySelector('.addToCart');
 
@@ -8,9 +8,10 @@ addToCartbtn.addEventListener('click', () => {
     const selectedSize = document.getElementById('size').value;
     const productPrice = parseFloat(document.querySelector('.item-3-desc span').textContent.trim().replace(/[^\d.]/g, ''));
     const selectedQuantity = parseInt(document.getElementById('quantity').value, 10);
-    const productImage = "assets/images/jacket-11.webp"; 
+    const productImage =  document.querySelector('.target-image img').src;
+    const productId = document.querySelector('.target-image img').id;
 
-    addToCart(productName, selectedSize, productPrice, selectedQuantity, productImage);
+    addToCart(productName, selectedSize, productPrice, selectedQuantity, productImage, productId);
     updateCartIconDisplay();
 });
 
@@ -18,7 +19,7 @@ addToCartbtn.addEventListener('click', () => {
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Function to add an item to the cart
-function addToCart(name, size, price, quantity, image) {
+function addToCart(name, size, price, quantity, image, id) {
     // Check if the item is already in the cart
     const existingItemIndex = cart.findIndex(item => (
         item.name === name &&
@@ -32,7 +33,7 @@ function addToCart(name, size, price, quantity, image) {
         existingItem.quantity += quantity;
     } else {
         // Item not in the cart, add it
-        const item = { name, size, price, quantity, image, ID: 'Product' + (cart.length + 1) };
+        const item = { name, size, price, quantity, image, id};
         cart.push(item);
     }
     saveCartToLocalStorage(); // Save the updated cart to local storage

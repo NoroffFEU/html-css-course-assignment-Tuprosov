@@ -1,4 +1,5 @@
 import { allProducts } from "./fetch.js";
+console.log(allProducts)
 
 // extract product id
 const parameterString = window.location.search;
@@ -20,6 +21,8 @@ function displayClickedProduct(){
 
     // change the information
     image.src = targetProduct.image;
+    image.alt = targetProduct.description
+    image.id = targetProduct.id;
     for(const img of imageParts){
         img.src = targetProduct.image
     }
