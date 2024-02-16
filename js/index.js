@@ -41,13 +41,15 @@ function displayFeaturedProducts() {
        slideImg[i].innerHTML = `<a class="image-link"><img src="${allProducts[i].image}" id="${allProducts[i].id}" alt="${allProducts[i].description}"></a>`
        slideText[i].innerHTML = `${allProducts[i].title}<br>$${allProducts[i].price}` 
     }
+    transferProductID();
 }
 
 function displayNewProducts() {
     for (let i = 0; i<slideImg.length; i++) {
-        slideImg[i].innerHTML = `<a class="image-link"><img src="${allProducts[i+1].image}" id="${allProducts[i].id}" alt="${allProducts[i+1].description}"></a>`
+        slideImg[i].innerHTML = `<a class="image-link"><img src="${allProducts[i+1].image}" id="${allProducts[i+1].id}" alt="${allProducts[i+1].description}"></a>`
         slideText[i].innerHTML = `${allProducts[i+1].title}<br>$${allProducts[i+1].price}` 
-     }
+    }
+    transferProductID();
 }
 
 
@@ -55,5 +57,4 @@ initializeSlider();
 displayFeaturedProducts()
 swtichHeaderLogo();
 updateCartIconDisplay();
-clickEvents()
-transferProductID();
+clickEvents();

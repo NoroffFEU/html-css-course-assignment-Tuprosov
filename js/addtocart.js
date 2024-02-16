@@ -1,4 +1,6 @@
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
+import { allProducts } from "./fetch.js";
+
 const addToCartbtn = document.querySelector('.addToCart');
 
 addToCartbtn.addEventListener('click', () => {

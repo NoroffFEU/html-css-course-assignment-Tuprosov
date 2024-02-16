@@ -1,3 +1,5 @@
+let allProducts
+
 async function fetchData(url) {
     try {
         const data = await fetch(url);
@@ -9,14 +11,17 @@ async function fetchData(url) {
 }
 
 async function getAllProducts(){
-    const apiUrl = 'https://api.noroff.dev/api/v1/rainy-days';
-    const products  = await fetchData(apiUrl)
-    return products
+    if(!allProducts) {
+        const apiUrl = 'https://api.noroff.dev/api/v1/rainy-days';
+        allProducts  = await fetchData(apiUrl)
+    }
 }
 
-export const allProducts = await getAllProducts();
+await getAllProducts();
+export {allProducts}
 export const menProducts = allProducts.filter(item => item.gender.toLowerCase() === 'male')
 export const womenProducts = allProducts.filter(item => item.gender.toLowerCase() === 'female')
+
 
 
 

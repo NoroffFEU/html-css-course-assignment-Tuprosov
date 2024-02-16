@@ -42,10 +42,8 @@ function displayProducts(products){
 
 function selectRelatedProduct(){
     if(document.querySelector('h1').textContent.toLowerCase() === 'for women'){
-        console.log('active')
         displayProducts(womenProducts)        
     }else{
-        console.log('active')
         displayProducts(menProducts)
     }
 }

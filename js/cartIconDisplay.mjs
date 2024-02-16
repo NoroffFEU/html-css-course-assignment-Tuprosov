@@ -14,4 +14,3 @@ export function updateCartIconDisplay() {
         cartIcon.classList.add('active');
     }
 }
- updateCartIconDisplay();
