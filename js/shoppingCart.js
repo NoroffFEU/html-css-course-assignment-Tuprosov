@@ -2,33 +2,27 @@ import './burger.js';
 import { updateCartIconDisplay } from './cartIconDisplay.mjs';
 
 
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 displayCart();
 updateCartIconDisplay();
+transferPageName();
 
 function displayCart(){
-    const productsContainer = document.querySelector('.product-select');
     const productsList = document.querySelector('.cart__list');
-    const formPrice = document.querySelector('.product-price');
-    const formTax = document.querySelector('.product-tax');
-    const totalPay = document.querySelector('.total-pay p');
 
     if (productsList) {
         productsList.innerHTML = '';
     }
     
-
     if(cart.length === 0 ){
-        productsContainer.innerHTML += '<p style="text-align: center;font-size: 2rem"> Your cart is empty for now </p>';
-        formPrice.textContent = '0.00 USD';
-        formTax.textContent = '0.00 USD';
-        totalPay.textContent = '0.00 USD';
+        updateCartDisplay();
         
     } else {
         cart.forEach(element => {
             const item = document.createElement('li');
             item.classList.add('cart__item', 'flex');
-            item.setAttribute('id', `${element.ID}`);
+            item.setAttribute('id', `${element.id}`);
             item.innerHTML = `
             <button class="btn-reset removeProduct" aria-label="remove the product from cart">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -44,7 +38,7 @@ function displayCart(){
             <div class="item__info">
                 <h3 class="item__title-cp" tabindex="0">${element.name}</h3>
                 <p class="item__details flex">
-                    <span>Color: Purple</span>
+                    <span>Color: ${element.color}</span>
                     <span>Size: ${element.size}</span>
                     <span>Quantity: ${element.quantity}</span>
                     <span>Price: ${element.price} USD</span>
@@ -56,29 +50,44 @@ function displayCart(){
                 <button class="btn-reset increment">+</button>
             </div>
             `
-            productsList.appendChild(item);
-
-            const totalCost = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-            formPrice.textContent = `${totalCost.toFixed(2)} USD`;
-            const tax = totalCost * 0.1;
-            const totalToPay = totalCost + tax;
-            formTax.textContent = `${tax.toFixed(2)} USD`;
-            totalPay.textContent = `${totalToPay.toFixed(2)} USD`;
+            productsList.appendChild(item);            
+            
+            calculateFormNumbers()
         });
     }
+}
+
+function calculateFormNumbers(){
+    
+    const formPrice = document.querySelector('.product-price');
+    const formTax = document.querySelector('.product-tax');
+    const totalPay = document.querySelector('.total-pay p');
+
+    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const tax = Math.trunc(totalPrice * 0.1 * 100) / 100;
+    const totalToPay = Math.trunc((totalPrice + tax)*100)/ 100;
+    formPrice.textContent = `${Math.trunc(totalPrice * 100) / 100} USD`;
+    formTax.textContent = `${tax} USD`;
+    totalPay.textContent = `${totalToPay} USD`;
+
+    // save updated cart
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+    // save totaltopay to local storage to use in checkout
+    localStorage.setItem('totalToPay', totalToPay.toString());
+
 }
 
 // Get all the cart items
 const cartItems = document.querySelectorAll('.cart__item');
 
 // Loop through each cart item and add event listeners to the buttons
-cartItems.forEach((item, index) => {
+cartItems.forEach((item) => {
     const decrementButton = item.querySelector('.decrement');
     const incrementButton = item.querySelector('.increment');
     const quantityDisplay = item.querySelector('.quantity');
     const quantitySpan = item.querySelector('.item__details span:nth-child(3)');
     const deleteButton = item.querySelector('.removeProduct');
-
     
     // Add event listener for decrement button
     decrementButton.addEventListener('click', () => {
@@ -88,6 +97,7 @@ cartItems.forEach((item, index) => {
             quantityDisplay.textContent = currentQuantity;
             quantitySpan.textContent = `Quantity: ${currentQuantity}`
             updateCartItemQuantity(item.getAttribute('id'), currentQuantity);
+            calculateFormNumbers();
             updateCartIconDisplay();
         }
     });
@@ -99,6 +109,7 @@ cartItems.forEach((item, index) => {
         quantityDisplay.textContent = currentQuantity;
         quantitySpan.textContent = `Quantity: ${currentQuantity}`
         updateCartItemQuantity(item.getAttribute('id'), currentQuantity);
+        calculateFormNumbers();
         updateCartIconDisplay();
     });
 
@@ -112,54 +123,36 @@ cartItems.forEach((item, index) => {
 });
 
 function updateCartItemQuantity(ID, newQuantity) {
-    // Retrieve the cart from local storage
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     // Look for the ID in items to change the quantity
     cart.forEach(product => {
-        if (product.ID === ID) {
+        if (product.id === ID) {
             product.quantity = newQuantity
         }
     })
-
-    // Save the updated cart to local storage
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    // Update the displayed total and any other relevant information
-    updateCartDisplay();
 }
 
 function updateCartDisplay() {
-    let totalPriceDisplay = document.querySelector('.total-pay p');
+    // Check if the cart is empty
+    if (cart.length === 0) {
+        const productsContainer = document.querySelector('.product-select');
+        const formPrice = document.querySelector('.product-price');
+        const formTax = document.querySelector('.product-tax');
+        const totalPay = document.querySelector('.total-pay p');
 
-    // Retrieve the cart from local storage
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        productsContainer.innerHTML = '<p style="text-align: center; font-size: 2rem;">Your cart is empty for now</p>';
+        formPrice.textContent = '0.00 USD';
+        formTax.textContent = '0.00 USD';
+        totalPay.textContent = '0.00 USD';
 
-    // Calculate total price
-    const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 10);
-
-    // Update the total price
-    totalPriceDisplay.textContent = `${totalPrice.toFixed(2)} USD`;
-
-        // Check if the cart is empty
-        if (cart.length === 0) {
-            let productsContainer = document.querySelector('.product-select');
-            let formPrice = document.querySelector('.product-price');
-            let formTax = document.querySelector('.product-tax');
-            let totalPay = document.querySelector('.total-pay p');
-
-            productsContainer.innerHTML = '<p style="text-align: center; font-size: 2rem;">Your cart is empty for now</p>';
-            formPrice.textContent = '0.00 USD';
-            formTax.textContent = '0.00 USD';
-            totalPay.textContent = '0.00 USD';
-        }
+        localStorage.clear();
+    }
 }
 
 function removeFromCart(ID) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartIcon = document.querySelector('.cart-icon');
 
     // Find the index of the item with the matching custom ID
-    const indexToRemove = cart.findIndex(item => item.ID === ID);
+    const indexToRemove = cart.findIndex(item => item.id === ID);
 
     // If found, remove the product completely
     if (indexToRemove !== -1) {
@@ -169,12 +162,11 @@ function removeFromCart(ID) {
         // Remove active state from the icon if there is no product left
         if(cart.length === 0) {
             cartIcon.classList.remove('active');
+        } else {
+            console.log('calculate running!')
+            calculateFormNumbers();
         }
 
-        // Save the updated cart to local storage
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        // Update the displayed total and any other relevant information with a callback
         updateCartDisplay();
     }
 };

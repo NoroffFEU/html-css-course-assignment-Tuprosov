@@ -1,8 +1,9 @@
 import { allProducts } from "./fetch.js";
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 import './burger.js';
-import { initializeSlider } from "./slider.js";
-import {transferProductID} from "./getid.js"
+import { initializeSlider } from "./slider.mjs";
+import {transferProductID} from "./getid.mjs"
+
 
 
 const slideImg = document.querySelectorAll('.slide-image');

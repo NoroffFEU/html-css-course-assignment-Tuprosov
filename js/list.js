@@ -1,10 +1,13 @@
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 import './burger.js';
 import { menProducts, womenProducts} from "./fetch.js";
-import { transferProductID } from "./getid.js";
+import { transferProductID } from "./getid.mjs";
 
 
-
+// extract page name
+const parameterString = window.location.search;
+const searchParameters = new URLSearchParams(parameterString);
+const pageName = searchParameters.get('name');
 
 
 let filterBtn = document.querySelector('.filter__btn');
@@ -41,9 +44,11 @@ function displayProducts(products){
 }
 
 function selectRelatedProduct(){
-    if(document.querySelector('h1').textContent.toLowerCase() === 'for women'){
+    if(pageName === 'Women'){
+        document.querySelector('h1').textContent = 'FOR WOMEN';
         displayProducts(womenProducts)        
     }else{
+        document.querySelector('h1').textContent = 'FOR MEN';
         displayProducts(menProducts)
     }
 }

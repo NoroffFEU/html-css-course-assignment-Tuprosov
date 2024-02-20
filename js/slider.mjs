@@ -18,8 +18,8 @@ export function initializeSlider() {
         carousel.insertBefore(slides[currentIndex], carousel.firstChild);
 
         setTimeout(() => {
-            carousel.style.transform = "";
             carousel.classList.add("sliding-transition");
+            carousel.style.transform = "";
         }, 10);
 
         setTimeout(() => {

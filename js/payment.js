@@ -1,6 +1,7 @@
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 import './burger.js';
 
+
 // switching active state between payment options
 function setIconActive(){ 
     const paymentIcons = document.querySelectorAll('.payment__options svg');

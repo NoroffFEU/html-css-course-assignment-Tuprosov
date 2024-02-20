@@ -1,6 +1,5 @@
 import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 
-
 const addToCartbtn = document.querySelector('.addToCart');
 
 addToCartbtn.addEventListener('click', () => {
@@ -10,8 +9,9 @@ addToCartbtn.addEventListener('click', () => {
     const selectedQuantity = parseInt(document.getElementById('quantity').value, 10);
     const productImage =  document.querySelector('.target-image img').src;
     const productId = document.querySelector('.target-image img').id;
+    const productColor = document.querySelector('.color').style.backgroundColor;
 
-    addToCart(productName, selectedSize, productPrice, selectedQuantity, productImage, productId);
+    addToCart(productName, selectedSize, productPrice, selectedQuantity, productImage, productId, productColor);
     updateCartIconDisplay();
 });
 
@@ -19,7 +19,7 @@ addToCartbtn.addEventListener('click', () => {
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Function to add an item to the cart
-function addToCart(name, size, price, quantity, image, id) {
+function addToCart(name, size, price, quantity, image, id, color) {
     // Check if the item is already in the cart
     const existingItemIndex = cart.findIndex(item => (
         item.name === name &&
@@ -33,7 +33,7 @@ function addToCart(name, size, price, quantity, image, id) {
         existingItem.quantity += quantity;
     } else {
         // Item not in the cart, add it
-        const item = { name, size, price, quantity, image, id};
+        const item = { name, size, price, quantity, image, id, color};
         cart.push(item);
     }
     saveCartToLocalStorage(); // Save the updated cart to local storage

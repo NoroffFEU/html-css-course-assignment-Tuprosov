@@ -1,5 +1,5 @@
 import { allProducts } from "./fetch.js";
-console.log(allProducts)
+
 
 // extract product id
 const parameterString = window.location.search;
@@ -15,6 +15,8 @@ function displayClickedProduct(){
     const imageParts = document.querySelectorAll('.image-parts img');
     const productTitle = document.querySelector('.top__item-3 h2');
     const productDescription = document.querySelector('.item-3-desc');
+    const productColor = document.querySelector('.color-name');
+    const colorDiv = document.querySelector('.color');
 
     // get targeted product
     const targetProduct = getClickedProduct(productId);
@@ -29,6 +31,8 @@ function displayClickedProduct(){
 
     productTitle.textContent = targetProduct.title.replace(/Rainy Days/, '');
     productDescription.innerHTML= `${targetProduct.description}<br><span aria-label="Price ${targetProduct.price}$">$${targetProduct.price}</span>`
+    productColor.textContent = `Color: ${targetProduct.baseColor}`
+    colorDiv.style.backgroundColor = targetProduct.baseColor
 }
 
 displayClickedProduct();

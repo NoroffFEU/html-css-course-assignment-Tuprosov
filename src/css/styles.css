@@ -515,14 +515,6 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.color-red {
-  background-color: red;
-}
-
-.color-green {
-  background-color: green;
-}
-
 .item-3-quantity {
   margin-bottom: 20px;
   flex-wrap: wrap;
