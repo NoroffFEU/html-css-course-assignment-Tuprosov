@@ -120,6 +120,11 @@
     gap: 30px;
 }
 
+.grid-fixed-columns {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+}
+
+
 .product__item-lj {
     position: relative;
     cursor: pointer;
@@ -130,7 +135,7 @@
     padding: 60px 0;
     border: 1px solid rgb(10, 54, 65, 0.5);
     border-radius: 10px;
-    aspect-ratio: 1 / 1.4;
+    aspect-ratio: 1 / 1.6;
 }
 
 .desc-wrapper {

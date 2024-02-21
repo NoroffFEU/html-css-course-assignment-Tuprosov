@@ -6,7 +6,6 @@ import { updateCartIconDisplay } from './cartIconDisplay.mjs';
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 displayCart();
 updateCartIconDisplay();
-transferPageName();
 
 function displayCart(){
     const productsList = document.querySelector('.cart__list');

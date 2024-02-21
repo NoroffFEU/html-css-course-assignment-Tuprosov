@@ -111,6 +111,7 @@ section {
 .nav__link {
     font-weight: 700;
     color: var(--nav-color);
+    cursor: pointer;
 }
 
 .icons {
