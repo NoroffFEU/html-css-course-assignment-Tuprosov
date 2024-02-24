@@ -209,6 +209,7 @@
                 </svg>
             </div>
             <p class="payment__desc">All transaction are secured and encoded.</p>
+            <ul id="basketSummary" class="list-reset grid"></ul>
             <form class="payment__form flex" action="#" method="post" id="payment" aria-label="payment form">
                 <img src="assets/images/card-payment.png" alt="image of a bank card">
                 <div class="payment__main">
@@ -226,9 +227,9 @@
                     </div>
                     <div class="desc flex">
                         <p>Total to pay</p>
-                        <p>210.00 USD</p>
+                        <p id="totalToPay">210.00 USD</p>
                     </div>
-                    <button class="btn-reset pay" type="submit" aria-label="Pay">Pay</button>
+                    <a class="btn-reset pay" type="submit" aria-label="Pay" href="confirmation.html">Pay</a>
                 </div>
             </form>
         </div>

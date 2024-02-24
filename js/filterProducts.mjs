@@ -52,10 +52,12 @@ export function sortProducts(products, displayProducts){
 
     // if sorted by price, sort the products array and display it
     sortDropdown.addEventListener('change', function(event){
-        console.log('running')
+        let isSorted = false
         const sortType = event.detail.value;
-        if (sortType === 'Price'){
+        if (sortType === 'Price' && !isSorted){
+            console.log('running')
             const sorted = products.sort((a, b) => a.price - b.price)
+            isSorted = true
             displayProducts(sorted)
         }
     })

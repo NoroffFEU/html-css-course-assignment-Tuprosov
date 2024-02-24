@@ -15,7 +15,7 @@ function displayCart(){
     }
     
     if(cart.length === 0 ){
-        updateCartDisplay();
+        updateFormDisplay();
         
     } else {
         cart.forEach(element => {
@@ -61,6 +61,7 @@ function calculateFormNumbers(){
     const formPrice = document.querySelector('.product-price');
     const formTax = document.querySelector('.product-tax');
     const totalPay = document.querySelector('.total-pay p');
+    
 
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
     const tax = Math.trunc(totalPrice * 0.1 * 100) / 100;
@@ -130,21 +131,25 @@ function updateCartItemQuantity(ID, newQuantity) {
     })
 }
 
-function updateCartDisplay() {
-    // Check if the cart is empty
-    if (cart.length === 0) {
-        const productsContainer = document.querySelector('.product-select');
-        const formPrice = document.querySelector('.product-price');
-        const formTax = document.querySelector('.product-tax');
-        const totalPay = document.querySelector('.total-pay p');
+function updateFormDisplay() {
+    const productsContainer = document.querySelector('.product-select');
+    const formPrice = document.querySelector('.product-price');
+    const formTax = document.querySelector('.product-tax');
+    const totalPay = document.querySelector('.total-pay p');
+    const checkoutBtn = document.querySelector('.checkout');
 
-        productsContainer.innerHTML = '<p style="text-align: center; font-size: 2rem;">Your cart is empty for now</p>';
-        formPrice.textContent = '0.00 USD';
-        formTax.textContent = '0.00 USD';
-        totalPay.textContent = '0.00 USD';
+    checkoutBtn.style.opacity = '0.5'
+    checkoutBtn.addEventListener('click', (event)=> {
+        event.preventDefault();
+    })
 
-        localStorage.clear();
-    }
+    productsContainer.innerHTML = '<p style="text-align: center; font-size: 2rem;">Your cart is empty</p>';
+    formPrice.textContent = '0.00 USD';
+    formTax.textContent = '0.00 USD';
+    totalPay.textContent = '0.00 USD';
+
+
+    localStorage.clear();
 }
 
 function removeFromCart(ID) {
@@ -161,12 +166,11 @@ function removeFromCart(ID) {
         // Remove active state from the icon if there is no product left
         if(cart.length === 0) {
             cartIcon.classList.remove('active');
+            updateFormDisplay();
         } else {
-            console.log('calculate running!')
             calculateFormNumbers();
         }
-
-        updateCartDisplay();
     }
 };
+
 

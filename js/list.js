@@ -65,6 +65,7 @@ function displayProducts(products){
             productContainer.appendChild(li);
         }
     }
+    transferProductID();
 }
 
 function selectRelatedProduct(){

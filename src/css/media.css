@@ -343,6 +343,14 @@
     .payment__options {
         justify-content: center;
     }
+
+    #basketSummary {
+        justify-content: center;
+    }
+
+    .summary-title {
+        text-align: center;
+    }
 }
 
 @media (max-width: 990px) {
