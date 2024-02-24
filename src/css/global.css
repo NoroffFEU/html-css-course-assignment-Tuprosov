@@ -97,12 +97,7 @@ section {
 
 .header__logo {
     height: 120px;
-    /* margin-right: auto; */
 }
-
-/* .nav {
-    margin-right: auto;
-} */
 
 .nav__list {
     gap: 30px;
