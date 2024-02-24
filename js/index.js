@@ -3,7 +3,7 @@ import { updateCartIconDisplay } from "./cartIconDisplay.mjs";
 import './burger.js';
 import { initializeSlider } from "./slider.mjs";
 import {transferProductID} from "./getid.mjs"
-import { sortProducts } from "./filterProducts.mjs";
+
 
 
 const slideImg = document.querySelectorAll('.slide-image');
@@ -59,4 +59,4 @@ displayFeaturedProducts()
 swtichHeaderLogo();
 updateCartIconDisplay();
 clickEvents();
-sortProducts();
+
